@@ -20,7 +20,7 @@ $ make
 
 ## seed & node id 생성
 
-현재 4대의 validator에서 사용할 node seed와 validator 설정값에 넣을 pubkey 생성해야합니다.
+현재 4대의 validator에서 사용할 node seed와 validator 설정값에 넣을 public key 생성해야합니다.
 
 ```
 $ bin/brave keypair generate
@@ -97,6 +97,11 @@ $ curl 'http://127.0.0.1:1168{1,2,3,4}/info'
    ...
 }
 ```
+## 종료
+
+```
+$ $ docker-compose down -v
+```
 
 ## 계정 생성
 
@@ -152,4 +157,3 @@ bin/brave account balance --alias root
 > My account address: GBADF6QQKKMM7A5N26VXJQGBYTXPWMURJVUXZ4VEHIROJJS2Q22ONK3E
 > type: native balance: 99999946177.9988800
 ```
-
