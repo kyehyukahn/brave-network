@@ -100,7 +100,7 @@ $ curl 'http://127.0.0.1:1168{1,2,3,4}/info'
 ## 종료
 
 ```
-$ $ docker-compose down -v
+$ docker-compose down -v
 ```
 
 ## 계정 생성
