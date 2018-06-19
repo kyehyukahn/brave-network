@@ -81,6 +81,7 @@ services:
       COMMANDS: '["ll?level=error"]'
     ports:
       - "11681:11626"
+      - "11701:11625"
     depends_on: ["db1"]
   core2:
     image: zzim2x/stellar-core-quorum:9.2.0-13d55680
@@ -92,6 +93,7 @@ services:
        COMMANDS: '["ll?level=debug"]'
     ports:
       - "11682:11626"
+      - "11702:11625"
     depends_on: ["db2"]
   core3:
     image: zzim2x/stellar-core-quorum:9.2.0-13d55680
@@ -103,6 +105,7 @@ services:
        COMMANDS: '["ll?level=debug"]'
     ports:
       - "11683:11626"
+      - "11703:11625"
     depends_on: ["db3"]
   core4:
     image: zzim2x/stellar-core-quorum:9.2.0-13d55680
@@ -114,6 +117,7 @@ services:
        COMMANDS: '["ll?level=debug"]'
     ports:
       - "11684:11626"
+      - "11704:11625"
     depends_on: ["db4"]
   core5:
     image: zzim2x/stellar-core-quorum:9.2.0-13d55680
@@ -125,6 +129,7 @@ services:
        COMMANDS: '["ll?level=debug"]'
     ports:
       - "11685:11626"
+      - "11705:11625"
     depends_on: ["db5"]
   core6:
     image: zzim2x/stellar-core-quorum:9.2.0-13d55680
@@ -136,6 +141,7 @@ services:
        COMMANDS: '["ll?level=debug"]'
     ports:
       - "11686:11626"
+      - "11706:11625"
     depends_on: ["db6"]
   core7:
     image: zzim2x/stellar-core-quorum:9.2.0-13d55680
@@ -147,6 +153,7 @@ services:
       COMMANDS: '["ll?level=debug"]'
     ports:
       - "11687:11626"
+      - "11707:11625"
     depends_on: ["db7"]
   core8:
     image: zzim2x/stellar-core-quorum:9.2.0-13d55680
@@ -158,6 +165,7 @@ services:
       COMMANDS: '["ll?level=debug"]'
     ports:
       - "11688:11626"
+      - "11708:11625"
     depends_on: ["db8"]
   core9:
     image: zzim2x/stellar-core-quorum:9.2.0-13d55680
@@ -169,6 +177,7 @@ services:
       COMMANDS: '["ll?level=debug"]'
     ports:
       - "11689:11626"
+      - "11709:11625"
     depends_on: ["db9"]
   core10:
     image: zzim2x/stellar-core-quorum:9.2.0-13d55680
@@ -180,6 +189,7 @@ services:
       COMMANDS: '["ll?level=debug"]'
     ports:
       - "11690:11626"
+      - "11710:11625"
     depends_on: ["db10"]
   core11:
     image: zzim2x/stellar-core-quorum:9.2.0-13d55680
@@ -191,6 +201,7 @@ services:
       COMMANDS: '["ll?level=debug"]'
     ports:
       - "11691:11626"
+      - "11711:11625"
     depends_on: ["db11"]
   core12:
     image: zzim2x/stellar-core-quorum:9.2.0-13d55680
@@ -202,6 +213,7 @@ services:
       COMMANDS: '["ll?level=debug"]'
     ports:
       - "11692:11626"
+      - "11712:11625"
     depends_on: ["db12"]
 volumes:
   db1-data:
