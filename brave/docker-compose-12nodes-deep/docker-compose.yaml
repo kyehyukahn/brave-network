@@ -83,7 +83,7 @@ services:
       - "11681:11626"
     depends_on: ["db1"]
   core2:
-    image: zzim2x/stellar-core-quorum:9.2.0-13d55680
+    image: zzim2x/stellar-core-quorum:9.2.0
     env_file: ["q_inter.env"]
     command: "core2 initdb newhist forcescp"
     volumes: ["./q_inter.cfg.tmpl:/etc/confd/templates/stellar-core.cfg.tmpl", "db2-unixsocket:/var/run/postgres", "history-data:/opt/stellar-core/history"]
@@ -138,7 +138,7 @@ services:
       - "11686:11626"
     depends_on: ["db6"]
   core7:
-    image: zzim2x/stellar-core-quorum:9.2.0-13d55680
+    image: zzim2x/stellar-core-quorum:9.2.0
     env_file: ["q_inter.env"]
     command: "core7 initdb newhist forcescp"
     volumes: ["./q_inter.cfg.tmpl:/etc/confd/templates/stellar-core.cfg.tmpl", "db7-unixsocket:/var/run/postgres", "history-data:/opt/stellar-core/history"]
