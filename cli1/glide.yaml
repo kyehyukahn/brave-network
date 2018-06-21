@@ -5,6 +5,3 @@ import:
   version: ~0.0.2
 - package: github.com/spf13/pflag
   version: ~1.0.0
-- package: github.com/stellar/go
-  subpackages:
-  - services/horizon

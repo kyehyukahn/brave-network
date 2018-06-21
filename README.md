@@ -104,8 +104,11 @@ $ curl 'http://127.0.0.1:1168{1,2,3,4}/peers'
 
 $ curl 'http://127.0.0.1:1168{1,2,3,4}/info'
 
+현재 docker에서 동작 중인 모든 프로세스를 보여준다.
+$ docker ps
 
-docker exec -it [process-id] /bin/bash
+위에서 찾은 프로세스 id를 이용하여 해당 도커로 진입하여 확인하면 된다.
+$ docker exec -it [process-id] /bin/bash
 ```
 ## 종료
 
@@ -120,7 +123,7 @@ $ cd `go env GOPATH`/src/github.com/zzim2x/brave-network/cli
 
 ROOT_SEED=SCTJ4RIYLZLA42675VYOE4QMERVDMQGTUGL44FLPXP3MN6JKD76CLG4M
 ACCOUNT_SEED=`bin/brave keypair generate | awk '{print $2}'`
-ACCOUNT_ADDRESS=`bin/brave keypair parse --seed=$NEW_ACCOUNT | awk '{print $2}'`
+ACCOUNT_ADDRESS=`bin/brave keypair parse --seed=$ACCOUNT_SEED | awk '{print $2}'`
 
 bin/brave transaction fund --seed $ROOT_SEED --address $ACCOUNT_ADDRESS --amount 10240
 > transaction posted in ledger: 34221
@@ -128,6 +131,8 @@ bin/brave transaction fund --seed $ROOT_SEED --address $ACCOUNT_ADDRESS --amount
 bin/brave account balance --address $ACCOUNT_ADDRESS
 > My account address: GAAL6DUVRMJTHGDW3PZSAMDLDPBR5GM6ENDTD2KGR2P6PPXHFXHHJQVG
 > type: native balance: 10240.0000000
+
+bin/brave transaction payment --seed $ROOT_SEED --address $ACCOUNT_ADDRESS --amount 100
 ```
 
 ## 잔고 확인
